@@ -14,6 +14,7 @@
 		10DCA667289A4ACF0020BF49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10DCA666289A4ACF0020BF49 /* Assets.xcassets */; };
 		10DCA66A289A4ACF0020BF49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10DCA668289A4ACF0020BF49 /* LaunchScreen.storyboard */; };
 		10DCA673289A58230020BF49 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DCA672289A58230020BF49 /* Model.swift */; };
+		10DCA675289A5AB10020BF49 /* MemoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DCA674289A5AB10020BF49 /* MemoListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		10DCA669289A4ACF0020BF49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10DCA66B289A4ACF0020BF49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10DCA672289A58230020BF49 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		10DCA674289A5AB10020BF49 /* MemoListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				10DCA65A289A4ACF0020BF49 /* AppDelegate.swift */,
 				10DCA65C289A4ACF0020BF49 /* SceneDelegate.swift */,
 				10DCA660289A4ACF0020BF49 /* Main.storyboard */,
+				10DCA674289A5AB10020BF49 /* MemoListTableViewController.swift */,
 				10DCA666289A4ACF0020BF49 /* Assets.xcassets */,
 				10DCA668289A4ACF0020BF49 /* LaunchScreen.storyboard */,
 				10DCA66B289A4ACF0020BF49 /* Info.plist */,
@@ -151,6 +154,7 @@
 			files = (
 				10DCA665289A4ACF0020BF49 /* MemoSwift.xcdatamodeld in Sources */,
 				10DCA65B289A4ACF0020BF49 /* AppDelegate.swift in Sources */,
+				10DCA675289A5AB10020BF49 /* MemoListTableViewController.swift in Sources */,
 				10DCA65D289A4ACF0020BF49 /* SceneDelegate.swift in Sources */,
 				10DCA673289A58230020BF49 /* Model.swift in Sources */,
 			);
