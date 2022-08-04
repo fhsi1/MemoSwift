@@ -23,6 +23,21 @@ class DetailViewController: UIViewController {
         return f
     }()
     
+    @IBAction func deleteMemo(_ sender: Any) {
+        let alert = UIAlertController(title: "Alert", message: "Are you sure you want to delete the memo?", preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "Delete", style: .destructive) { [weak self] (action) in
+            DataManager.shared.deleteMemo(self?.memo)
+            self?.navigationController?.popViewController(animated: true)
+        }
+        alert.addAction(okAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(cancelAction)
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // navigationController 가 관리하는 첫번째 child ViewController 로 메모 전달
         if let vc = segue.destination.children.first as? ComposeViewController {
