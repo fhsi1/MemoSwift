@@ -74,7 +74,11 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kY6-vC-uGL">
                                 <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem title="Item" id="yKN-um-dXr"/>
+                                    <barButtonItem systemItem="compose" id="yKN-um-dXr">
+                                        <connections>
+                                            <segue destination="j3s-jF-D8r" kind="presentation" id="Lev-SH-e04"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kbG-0N-6TP">
@@ -134,6 +138,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" largeTitleDisplayMode="never" id="Vx2-f3-FCM"/>
+                    <connections>
+                        <outlet property="memoTableView" destination="kbG-0N-6TP" id="dbf-xq-TV8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h1x-xQ-TIc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -220,6 +227,9 @@
             <point key="canvasLocation" x="967" y="-548"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Lev-SH-e04"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

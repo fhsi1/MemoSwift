@@ -13,6 +13,8 @@ class DetailViewController: UIViewController {
     // viewController 가 초기화되는 시점에는 값이 없기 때문에 Optional
     var memo: Memo?
     
+    @IBOutlet weak var memoTableView: UITableView!
+    
     let formatter: DateFormatter = {
         let f = DateFormatter()
         f.dateStyle = .long
@@ -20,11 +22,31 @@ class DetailViewController: UIViewController {
         f.locale = Locale(identifier: "Ko_kr")
         return f
     }()
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // navigationController 가 관리하는 첫번째 child ViewController 로 메모 전달
+        if let vc = segue.destination.children.first as? ComposeViewController {
+            vc.editTarget = memo
+        }
+    }
+    
+    // Notification token 저장 속성
+    var token: NSObjectProtocol?
+    deinit {
+        // token 해제
+        if let token = token {
+            NotificationCenter.default.removeObserver(token)
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        token = NotificationCenter.default.addObserver(forName: ComposeViewController.memoDidChange, object: nil, queue: OperationQueue.main, using: { [weak self] (noti) in
+            self?.memoTableView.reloadData()
+        })
     }
     
 
