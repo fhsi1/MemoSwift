@@ -76,6 +76,13 @@ class MemoListTableViewController: UITableViewController {
         let target = DataManager.shared.memoList[indexPath.row]
         cell.textLabel?.text = target.content
         cell.detailTextLabel?.text = formatter.string(for: target.insertDate)
+        
+        // label text color 변경
+        if #available(iOS 11.0, *) {
+            cell.detailTextLabel?.textColor = UIColor(named: "MyLabelColor")
+        } else {
+            cell.detailTextLabel?.textColor = .lightGray
+        }
 
         return cell
     }
