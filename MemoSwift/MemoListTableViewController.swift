@@ -32,6 +32,17 @@ class MemoListTableViewController: UITableViewController {
             NotificationCenter.default.removeObserver(token)
         }
     }
+    
+    // segway 가 연결된 화면을 생성하고 화면을 전환하기 직전에 호출
+    // tableView 로 전달하여 몇 번째 위치에 있는 cell 인지 확인
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let cell = sender as? UITableViewCell,
+           let indexPath = tableView.indexPath(for: cell) {
+            if let vc = segue.destination as? DetailViewController {
+                vc.memo = Memo.dummyMemoList[indexPath.row]
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
