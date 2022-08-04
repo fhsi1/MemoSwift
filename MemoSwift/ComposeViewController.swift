@@ -11,6 +11,9 @@ class ComposeViewController: UIViewController {
     
     // 보기 화면에서 전달한 메모 저장 속성
     var editTarget: Memo?
+    
+    // 편집 이전의 메모내용 저장 속성
+    var originalMemoContent: String?
 
     @IBOutlet weak var memoTextView: UITextView!
     
@@ -54,12 +57,26 @@ class ComposeViewController: UIViewController {
         if let memo = editTarget {
             navigationItem.title = "edit"
             memoTextView.text = memo.content
+            originalMemoContent = memo.content
         } else {
             navigationItem.title = "New MEMO"
             memoTextView.text = ""
         }
+        
+        memoTextView.delegate = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.presentationController?.delegate = self
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        navigationController?.presentationController?.delegate = nil
+    }
 
     /*
     // MARK: - Navigation
@@ -71,6 +88,41 @@ class ComposeViewController: UIViewController {
     }
     */
 
+}
+
+extension ComposeViewController: UITextViewDelegate {
+    // textView 에서 text 를 편집할 때마다 반복적으로 호출
+    func textViewDidChange(_ textView: UITextView) {
+        if let original = originalMemoContent, let edited = textView.text {
+            if #available(iOS 13.0, *) {
+                // 기존 메모와 수정된 메모가 다르다면 true 가 저장된다.
+                isModalInPresentation = original != edited
+            } else {
+                // Fallback on earlier versions
+            }
+        }
+    }
+}
+
+extension ComposeViewController: UIAdaptivePresentationControllerDelegate {
+    // 기존의 메모와 다른 수정된 메모를 작성하던 도중 modal 을 pull down 할 때 호출
+    func presentationControllerDidAttemptToDismiss(_ presentationController: UIPresentationController) {
+        let alert = UIAlertController(title: "Alert", message: "Do you want to save the edited memo?", preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "Confirm", style: .default) { [weak self] (action) in
+            self?.save(action)
+        }
+        
+        alert.addAction(okAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { [weak self] (action) in
+            self?.close(action)
+        }
+        
+        alert.addAction(cancelAction)
+        
+        present(alert, animated: true, completion: nil)
+    }
 }
 
 extension ComposeViewController {
