@@ -17,6 +17,7 @@
 		10DCA675289A5AB10020BF49 /* MemoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DCA674289A5AB10020BF49 /* MemoListTableViewController.swift */; };
 		10DCA677289A64430020BF49 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DCA676289A64430020BF49 /* ComposeViewController.swift */; };
 		10DCA679289A6C1C0020BF49 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DCA678289A6C1C0020BF49 /* UIViewController+Alert.swift */; };
+		10DCA67B289A762C0020BF49 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DCA67A289A762C0020BF49 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		10DCA674289A5AB10020BF49 /* MemoListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListTableViewController.swift; sourceTree = "<group>"; };
 		10DCA676289A64430020BF49 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		10DCA678289A6C1C0020BF49 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		10DCA67A289A762C0020BF49 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				10DCA660289A4ACF0020BF49 /* Main.storyboard */,
 				10DCA674289A5AB10020BF49 /* MemoListTableViewController.swift */,
 				10DCA676289A64430020BF49 /* ComposeViewController.swift */,
+				10DCA67A289A762C0020BF49 /* DetailViewController.swift */,
 				10DCA678289A6C1C0020BF49 /* UIViewController+Alert.swift */,
 				10DCA666289A4ACF0020BF49 /* Assets.xcassets */,
 				10DCA668289A4ACF0020BF49 /* LaunchScreen.storyboard */,
@@ -165,6 +168,7 @@
 				10DCA65D289A4ACF0020BF49 /* SceneDelegate.swift in Sources */,
 				10DCA673289A58230020BF49 /* Model.swift in Sources */,
 				10DCA679289A6C1C0020BF49 /* UIViewController+Alert.swift in Sources */,
+				10DCA67B289A762C0020BF49 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
