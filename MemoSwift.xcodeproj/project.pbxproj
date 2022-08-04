@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		104D9C04289B943600930EAD /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104D9C03289B943600930EAD /* DataManager.swift */; };
 		10DCA65B289A4ACF0020BF49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DCA65A289A4ACF0020BF49 /* AppDelegate.swift */; };
 		10DCA65D289A4ACF0020BF49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DCA65C289A4ACF0020BF49 /* SceneDelegate.swift */; };
 		10DCA662289A4ACF0020BF49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10DCA660289A4ACF0020BF49 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		104D9C03289B943600930EAD /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		10DCA657289A4ACF0020BF49 /* MemoSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10DCA65A289A4ACF0020BF49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10DCA65C289A4ACF0020BF49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		104D9C02289B942200930EAD /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				104D9C03289B943600930EAD /* DataManager.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		10DCA64E289A4ACF0020BF49 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +76,7 @@
 		10DCA659289A4ACF0020BF49 /* MemoSwift */ = {
 			isa = PBXGroup;
 			children = (
+				104D9C02289B942200930EAD /* Data */,
 				10DCA671289A57FD0020BF49 /* Model */,
 				10DCA65A289A4ACF0020BF49 /* AppDelegate.swift */,
 				10DCA65C289A4ACF0020BF49 /* SceneDelegate.swift */,
@@ -168,6 +179,7 @@
 				10DCA65D289A4ACF0020BF49 /* SceneDelegate.swift in Sources */,
 				10DCA673289A58230020BF49 /* Model.swift in Sources */,
 				10DCA679289A6C1C0020BF49 /* UIViewController+Alert.swift in Sources */,
+				104D9C04289B943600930EAD /* DataManager.swift in Sources */,
 				10DCA67B289A762C0020BF49 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
